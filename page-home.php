@@ -343,7 +343,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 		</div>
 		<hr class="block-line">
 
-		<!-- Anúncio 3 -->
+		<!-- Anúncio 2 -->
 		<div class="ads-horizontal">
 			<?php echo do_shortcode( '[anuncio_gov-1140x140]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
@@ -371,22 +371,18 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 		<?php show_4posts_horizontal( 'brasil', 'Brasil', 4); ?>	
 		<hr class="block-line">
 
-		<!-- Economia -->
-		<?php show_4posts_two_columns( 'economia', 'Economia', 4 ); ?>
-		<hr class="block-line">
-
 		<!-- Anúncio 4 -->
 		<div class="ads-horizontal">
 			<?php echo do_shortcode( '[anuncio_gov-1140x285]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
-		<!-- Cultura -->
-		<?php show_4posts_horizontal( 'cultura', 'Cultura', 4); ?>
+		<!-- Economia -->
+		<?php show_4posts_two_columns( 'economia', 'Economia', 4 ); ?>
 		<hr class="block-line">
 
-		<!-- Ciência & Educação -->
-		<?php show_4posts_horizontal( 'ciencia-educacao', 'Ciência & Educação', 4); ?>	
+		<!-- Cultura -->
+		<?php show_4posts_horizontal( 'cultura', 'Cultura', 4); ?>
 		<hr class="block-line">
 
 		<!-- Anúncio 5 -->
@@ -394,6 +390,10 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 			<?php echo do_shortcode( '[anuncio_gov-1140x410]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
+
+		<!-- Ciência & Educação -->
+		<?php show_4posts_horizontal( 'ciencia-educacao', 'Ciência & Educação', 4); ?>	
+		<hr class="block-line">
 
 		<!-- Saúde -->
 		<?php show_4posts_two_columns( 'saude', 'Saúde', 4 ); ?>
