@@ -28,38 +28,104 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Bloco Destaque Principal -->
 		<div class="destaque-principal">
-			
-			<?php
-			$aux = 0;
-			$custom_query = new WP_Query( array( 'posts_per_page' => -1 ) );			
-			while($custom_query->have_posts()) : $custom_query->the_post(); 
-				if ( get_field( "destaque_1" ) == "sim" ) : 
-					$aux = $aux + 1;?>
-					<div class="dp1">
-						<a href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail( '', array( 'class' => 'destaque-img' ) ); ?>
-						</a>
-						<span class="editoria-badge bg-ed-<?php echo show_category_slug() ?>"><?php echo show_category_name() ?></span>
-						<div class="dp1-conteudo">
-							<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-						</div>
-					</div>
-					<div class="dp1-mob">
-						<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-						<hr class="block-line-mob">
-					</div>
-					<?php					
-				endif;
-				if ($aux == 1) {
-					break;
-				}
-			endwhile;
-			wp_reset_postdata();
+
+			<div class="swiffy-slider slider-item-nogap slider-nav-visible slider-nav-autoplay
+			 slider-nav-autopause slider-indicators-round" data-slider-nav-autoplay-interval="7500">
+
+			 	<style>
+					.slider-nav {
+						top: 150px;
+						height: fit-content;
+						filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 1));
+					}
+					.slider-container {border-radius: 10px;}
+				</style>
+
+			 	<ul class="slider-container">
 				
+					<?php
+					$aux = 0;
+					$custom_query = new WP_Query( array( 'posts_per_page' => -1 ) );			
+					while($custom_query->have_posts()) : $custom_query->the_post(); 
+						if ( get_field( "destaques_principais" ) == "destaque_1" ) : 
+							$aux = $aux + 1;?>
+							<li class="dp1 slide-visible">
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail( '', array( 'class' => 'destaque-img' ) ); ?>
+								</a>
+								<span class="editoria-badge bg-ed-<?php echo show_category_slug() ?>"><?php echo show_category_name() ?></span>
+								<div class="dp1-conteudo">
+									<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+								</div>
+							</li>
+							<div class="dp1-mob">
+								<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+								<hr class="block-line-mob">
+							</div>
+							<?php					
+						endif;
+						if ($aux == 1) {
+							break;
+						}
+					endwhile;
+					wp_reset_postdata();
+
+					$aux = 0;
+					$custom_query = new WP_Query( array( 'posts_per_page' => -1 ) );			
+					while($custom_query->have_posts()) : $custom_query->the_post(); 
+						if ( get_field( "destaques_principais" ) == "destaque_2" ) : 
+							$aux = $aux + 1;?>
+							<li class="dp1 slide-visible">
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail( '', array( 'class' => 'destaque-img' ) ); ?>
+								</a>
+								<span class="editoria-badge bg-ed-<?php echo show_category_slug() ?>"><?php echo show_category_name() ?></span>
+								<div class="dp1-conteudo">
+									<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+								</div>
+							</li>
+							<?php					
+						endif;
+						if ($aux == 1) {
+							break;
+						}
+					endwhile;
+					wp_reset_postdata();
+
+					$aux = 0;
+					$custom_query = new WP_Query( array( 'posts_per_page' => -1 ) );			
+					while($custom_query->have_posts()) : $custom_query->the_post(); 
+						if ( get_field( "destaques_principais" ) == "destaque_3" ) : 
+							$aux = $aux + 1;?>
+							<li class="dp1 slide-visible">
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail( '', array( 'class' => 'destaque-img' ) ); ?>
+								</a>
+								<span class="editoria-badge bg-ed-<?php echo show_category_slug() ?>"><?php echo show_category_name() ?></span>
+								<div class="dp1-conteudo">
+									<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+								</div>
+							</li>
+							<?php					
+						endif;
+						if ($aux == 1) {
+							break;
+						}
+					endwhile;
+					wp_reset_postdata(); ?>
+
+				</ul>
+
+				<button type="button" class="slider-nav"></button>
+    			<button type="button" class="slider-nav slider-nav-next"></button>
+
+			</div>
+				
+			<?php
 			$custom_query = new WP_Query( array( 'posts_per_page' => -1 ) );
 			$aux2 = 0;
 			while($custom_query->have_posts()) : $custom_query->the_post();			
-			  	if ( get_field( "destaque_2" ) == "sim" ) : 
+			  	if ( get_field( "destaques_principais" ) == "destaque_4" ) : 
 					$aux2 = $aux2 + 1;?>
 					<div class="dp2">
 						<a href="<?php the_permalink(); ?>">
@@ -85,7 +151,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 			$custom_query = new WP_Query( array( 'posts_per_page' => -1 ) );
 			$aux3 = 0;
 			while($custom_query->have_posts()) : $custom_query->the_post();					
-				if ( get_field( "destaque_3" ) == "sim" ) : 
+				if ( get_field( "destaques_principais" ) == "destaque_5" ) : 
 					$aux3 = $aux3 + 1?>
 					<div class="dp2">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
@@ -119,7 +185,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 			$aux = 0;
 			$custom_query = new WP_Query( array( 'posts_per_page' => -1 ) );			
 			while($custom_query->have_posts()) : $custom_query->the_post(); 
-				if ( get_field( "destaque_0" ) == "sim" ) : 
+				if ( get_field( "destaques_especiais" ) == "destaque_0" ) : 
 					$aux = $aux + 1;?>
 					<div class="d0">
 						<div class="d0-thumbnail">
@@ -300,7 +366,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 					$aux = 0;
 					$custom_query = new WP_Query( array( 'posts_per_page' => -1 ) );
 					while($custom_query->have_posts()) : $custom_query->the_post(); 		
-						if (get_field( "destaque_6" ) == "sim")	:		
+						if (get_field( "destaques_especiais" ) == "destaque_6")	:		
 							$aux = $aux + 1;
 							?>
 							<div class="d6-thumbnail">

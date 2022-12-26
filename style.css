@@ -188,10 +188,11 @@
             transform: scale(1.15); /* (115% zoom) */
             filter: brightness(.9);
         } 
-        .d0-thumbnail, .d6-thumbnail, .dp1, .dp2 {
+        .d0-thumbnail, .d6-thumbnail, .dp2 {
             overflow: hidden;
             border-radius: 10px;
         }
+        .dp1 {overflow: hidden;}
         .dp1, .dp2, .cqpm {
             position: relative;
             width: 100%;
@@ -204,8 +205,6 @@
             color: #eee;
             width: 100%;
             padding: 15px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
         }
         .cqpm .cqpm-conteudo {
             padding: 7.5px;
@@ -508,13 +507,12 @@
             hr.block-line-mob-2 {
                 width: 3.75%; 
             }
-            
-            .dp1, .dp2 {
-                display: none;
+            .slider-nav, .dp1, .dp2 {
+                display: none!important;
             }
             .dp1-mob, .dp2-mob {
                 display: block;
-                width: 90%;
+                width: 90%!important;
                 margin: auto;
             }
             .dp1-mob h2 {

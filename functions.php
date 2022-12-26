@@ -291,6 +291,9 @@ function my_custom_head_code() {
     echo '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7361015084318825" crossorigin="anonymous"></script>';
     echo '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>';
 
+    echo '<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>';
+    echo '<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">';
+
     echo '<script>
       window.googletag = window.googletag || {cmd: []};
       googletag.cmd.push(function() {
