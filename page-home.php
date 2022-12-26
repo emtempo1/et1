@@ -365,7 +365,11 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Polícia -->
 		<?php show_4posts_horizontal( 'policia', 'Polícia', 4); ?>	
-		<hr class="block-line">				
+		<hr class="block-line">	
+		
+		<!-- Brasil -->
+		<?php show_4posts_horizontal( 'brasil', 'Brasil', 4); ?>	
+		<hr class="block-line">
 
 		<!-- Economia -->
 		<?php show_4posts_two_columns( 'economia', 'Economia', 4 ); ?>
