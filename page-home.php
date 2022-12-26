@@ -18,8 +18,6 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 <div id="primary" class="content-area">
 
-<div class="qqmerda"></div>
-
 	<div class="home-wrap">
 
 		<!-- Anúncio 1 -->
