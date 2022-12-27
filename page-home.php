@@ -22,7 +22,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 1 -->
 		<div class="ads-horizontal-topo">
-			<?php echo do_shortcode( '[anuncio_gov-1140x90]' ) ?>
+			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_1]' ) ?>
 			<style>.ads-horizontal-topo iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -411,7 +411,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 2 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_gov-1140x140]' ) ?>
+			<?php echo do_shortcode( '[anuncio_gov-1140x90]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 		
@@ -425,7 +425,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 3 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_gov-1140x190]' ) ?>
+			<?php echo do_shortcode( '[anuncio_gov-1140x140]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -439,7 +439,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 4 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_gov-1140x285]' ) ?>
+			<?php echo do_shortcode( '[anuncio_gov-1140x190]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -453,7 +453,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 5 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_gov-1140x410]' ) ?>
+			<?php echo do_shortcode( '[anuncio_gov-1140x285]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -473,11 +473,11 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 		<?php show_4posts_two_columns( 'tv-e-famosos', 'Tv e Famosos', 4); ?>	
 		<hr class="block-line">
 
-		<!-- Anúncio 6 
+		<!-- Anúncio 6 -->
 		<div class="ads-horizontal">
-			<?php //echo do_shortcode( '[]' ) ?>
+			<?php echo do_shortcode( '[anuncio_gov-1140x410]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
-		</div> -->
+		</div>
 
 	</div><!-- home-wrap -->	
 
