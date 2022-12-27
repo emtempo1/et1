@@ -690,6 +690,10 @@
             display: block;
             margin-top: 30px;
         }
+        .cat-col .titulo-secao {
+            width: 90%;
+            margin: auto;
+        }
         .cc-thumbnail {
             border-radius: 0;
             margin-bottom: 30px;
