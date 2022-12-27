@@ -188,17 +188,17 @@
             transform: scale(1.15); /* (115% zoom) */
             filter: brightness(.9);
         } 
-        .d0-thumbnail, .d6-thumbnail, .dp2 {
+        .d0-thumbnail, .d6-thumbnail, .dp2, .cc-thumbnail {
             overflow: hidden;
             border-radius: 10px;
         }
         .dp1 {overflow: hidden;}
-        .dp1, .dp2, .cqpm {
+        .dp1, .dp2, .cqpm, .cc-thumbnail {
             position: relative;
             width: 100%;
             margin: 0 auto;
         }
-        .dp1 .dp1-conteudo, .dp2 .dp2-conteudo, .cqpm .cqpm-conteudo {
+        .dp1 .dp1-conteudo, .dp2 .dp2-conteudo, .cqpm .cqpm-conteudo, .cc-thumbnail .cc-title {
             position: absolute;
             bottom: 0;
             background: linear-gradient(0deg,#000000 10%, rgba(0,0,0,0) 100%);
@@ -209,16 +209,16 @@
         .cqpm .cqpm-conteudo {
             padding: 7.5px;
         }
-        .dp1-conteudo h2, .dp2-conteudo h2, .cqpm-conteudo h2 {
+        .dp1-conteudo h2, .dp2-conteudo h2, .cqpm-conteudo h2, .cc-title h2 {
             font-weight: 600!important;
             text-rendering: optimizeLegibility;
             text-shadow: 0 1px 3px rgba(0,0,0,.8);
             color: #fff !important;
         }
-        .dp2 .dp2-conteudo {
+        .dp2 .dp2-conteudo, .cc-thumbnail .cc-title {
             padding: 15px 10px;
         }
-        .dp2-conteudo h2, .cqpm-conteudo h2 {
+        .dp2-conteudo h2, .cqpm-conteudo h2, .cc-title h2 {
             font-size: 16px;		
         }	
         .editoria-badge {
@@ -451,6 +451,33 @@
         }
     /* Categoria Quatro Posts */
 
+    /* Categoria Três Colunas */
+        .cat-3cols {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 30px;
+        }
+        .cat-col {
+            display: grid;
+            grid-template-areas: 'title';
+            row-gap: 30px;
+        }
+        .cc-thumbnail, .cc-thumbnail img {
+            height: 300px;
+        }
+        .cc-scnd {
+            height: 180px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 15px;
+            align-items: center;
+        }
+        .ccs-thumb img {
+            height: 180px;
+            border-radius: 10px;
+        }
+    /* Categoria Três Colunas */
+
 /* Desktop */
 
 
@@ -649,8 +676,34 @@
                 display: block;
             }
 
-
+            .cqpm-conteudo {
+                border-radius: 0 0 10px 10px;
+            }
         /* Categoria Quatro Posts */
+
+        /* Categoria Três Colunas */
+        .cat-3cols {
+            display: flex;
+            flex-direction: column;
+        }
+        .cat-col {
+            display: block;
+            margin-top: 30px;
+        }
+        .cc-thumbnail {
+            border-radius: 0;
+            margin-bottom: 30px;
+        }
+        .cc-scnd {
+            display: block;
+            width: 90%;
+            height: fit-content;
+            margin: auto auto 30px auto;
+        }
+        .ccs-thumb img {
+            display: none;
+        }
+    /* Categoria Três Colunas */
 
     }
 /* Mobile */
