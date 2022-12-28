@@ -278,7 +278,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 					<div><?php echo do_shortcode( '[anuncio_et1_home_300x250_1]' ); ?></div>
 				</div>
 
-				<div class="artic-grid" style="margin-bottom: 15px;"> <!-- Últimos Artigos -->
+				<div class="artic-grid mb-15"> <!-- Últimos Artigos -->
 					<div class="artic-top">
 						<span class="titulo-opiniao-main c-titulo">Últimos Artigos</span>
 						<span class="ler-mais"><a href="<?php echo category_link('Opinião') ?>">leia mais</a></span>
@@ -316,7 +316,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 					$aux = 0;
 					while($custom_query->have_posts()) : $custom_query->the_post(); 
 						$aux = $aux + 1; ?>							
-						<div class="articulista secondary">			
+						<div class="articulista artic-secondary">			
 							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
 								<?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
 							</a>					
@@ -344,7 +344,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 					$aux = 0;
 					while($custom_query->have_posts()) : $custom_query->the_post(); 
 						$aux = $aux + 1; ?>							
-						<div class="articulista secondary" style="margin-bottom: 12px">			
+						<div class="articulista artic-secondary" style="margin-bottom: 12px">			
 							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
 								<?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
 							</a>					

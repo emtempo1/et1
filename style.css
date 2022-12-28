@@ -355,7 +355,7 @@
             object-fit: cover;
             border-radius: 50%;
         }
-        .secondary img {
+        .artic-secondary img {
             width: 67.5px;
             height: 67.5px;
             margin: auto;
@@ -369,7 +369,7 @@
             font-weight: 500;
             margin: 0;
         }
-        .secondary h1 {font-size: 13px;}
+        .artic-secondary h1 {font-size: 13px;}
         .artic-data h2 {
             font-size: 12px;
             text-align: left;
@@ -377,7 +377,7 @@
             font-weight: 500;
             margin: 5px 0 0;
         }
-        .secondary h2 {font-size: 11px;}
+        .artic-secondary h2 {font-size: 11px;}
         .ler-mais {
             text-transform: uppercase;
             font-size: 10px;
@@ -630,7 +630,7 @@
         /* Articulistas */
             span.titulo-opiniao-secondary {padding-left: 30px;}
             .articulista {padding: 0 30px;}
-            .secondary img {
+            .artic-secondary img {
                 width: 75px;
                 height: 75px;
                 margin-left: 0;
