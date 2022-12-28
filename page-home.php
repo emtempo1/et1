@@ -212,12 +212,19 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 				}
 			endwhile;
 			wp_reset_postdata(); ?>
+
+			<!-- Anúncio 2 -->
 			<div class="d0-ads">
-			<?php echo do_shortcode( '[anuncio_et1_home_300x600_1]' ); ?>
-			
+				<?php echo do_shortcode( '[anuncio_et1_home_300x600_1]' ); ?>
 			</div>
 		</div>
 		<hr class="block-line">
+
+		<!-- Anúncio 3 -->
+		<div class="ads-horizontal">
+			<?php echo do_shortcode( '[anuncio_gov-1140x90]' ) ?>
+			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
+		</div>
 
 		<!-- Últimas Notícias -->
 		<div class="ultimas-noticias">
@@ -265,7 +272,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 			</div>
 
 			<div class="un-right">
-				<!-- Anúncio 300x250 (1) -->
+				<!-- Anúncio 4 -->
 				<div class="conteudo-especial">
 					<span>Conteúdo Especial</span>
 					<div><?php echo do_shortcode( '[anuncio_et1_home_300x250_1]' ); ?></div>
@@ -396,12 +403,13 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 				</div>			
 			</div>
 			
-			<!-- Div para ajustar o grid no mobile -->
-			<div style="align-self:center;">
-				<!-- Anúncio 300x250 (2) -->
+			<div style="align-self:center;"> <!-- Div para ajustar o grid no mobile -->
+
+				<!-- Anúncio 5 -->
 				<div style="width:300px; height:250px; margin:auto;">
 					<?php echo do_shortcode( '[anuncio_et1_home_300x250_2]' ); ?>
 				</div>
+
 				<!-- Linha divisória p/ mobile -->
 				<div class="line-height-20 mt-30"></div>
 			</div>
@@ -409,75 +417,61 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 		</div>
 		<hr class="block-line">
 
-		<!-- Anúncio 2 -->
-		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_gov-1140x90]' ) ?>
-			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
-		</div>
-		
-		<!-- Amazonas -->
-		<?php show_4posts_horizontal( 'amazonas', 'Amazonas', 4); ?>
-		<hr class="block-line">
-
-		<!-- Política -->
-		<?php show_4posts_horizontal( 'politica', 'Política', 4); ?>
-		<hr class="block-line">
-
-		<!-- Anúncio 3 -->
+		<!-- Anúncio 6 -->
 		<div class="ads-horizontal">
 			<?php echo do_shortcode( '[anuncio_gov-1140x140]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
+		
+		<!-- Amazonas -->
+		<?php show_4posts_two_columns( 'amazonas', 'Amazonas', 4); ?>
+		<hr class="block-line">
 
 		<!-- Polícia -->
 		<?php show_4posts_horizontal( 'policia', 'Polícia', 4); ?>	
 		<hr class="block-line">	
-		
-		<!-- Brasil -->
-		<?php show_4posts_horizontal( 'brasil', 'Brasil', 4); ?>	
-		<hr class="block-line">
 
-		<!-- Anúncio 4 -->
+		<!-- Anúncio 7 -->
 		<div class="ads-horizontal">
 			<?php echo do_shortcode( '[anuncio_gov-1140x190]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
+		<!-- Política -->
+		<?php show_4posts_horizontal( 'politica', 'Política', 4); ?>
+		<hr class="block-line">
+
 		<!-- Economia -->
-		<?php show_4posts_two_columns( 'economia', 'Economia', 4 ); ?>
+		<?php show_4posts_horizontal( 'economia', 'Economia', 4 ); ?>
+		<hr class="block-line">
+		
+		<!-- Brasil, Mundo e Mundo Selvagem -->
+		<?php show_vertical_posts_3_columns( 'brasil', 'Brasil', 'mundo', 'Mundo', 'mundo-selvagem', 'Mundo Selvagem'); ?>	
 		<hr class="block-line">
 
-		<!-- Cultura -->
-		<?php show_4posts_horizontal( 'cultura', 'Cultura', 4); ?>
-		<hr class="block-line">
-
-		<!-- Anúncio 5 -->
+		<!-- Anúncio 8 -->
 		<div class="ads-horizontal">
 			<?php echo do_shortcode( '[anuncio_gov-1140x285]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
-		<!-- Ciência & Educação -->
-		<?php show_4posts_horizontal( 'ciencia-educacao', 'Ciência & Educação', 4); ?>	
+		<!-- Cultura -->
+		<?php show_4posts_two_columns( 'cultura', 'Cultura', 4); ?>
 		<hr class="block-line">
 
-		<!-- Saúde -->
-		<?php show_4posts_two_columns( 'saude', 'Saúde', 4 ); ?>
+		<!-- Saúde, Ciência & Educação e Esporte -->
+		<?php show_vertical_posts_3_columns( 'saude', 'Saúde', 'ciencia-educacao', 'Ciência & Educação', 'esporte', 'Esporte'); ?>	
 		<hr class="block-line">
 
-		<!-- Mundo -->
-		<?php show_4posts_horizontal( 'mundo', 'Mundo', 4); ?>
-		<hr class="block-line">
-
-		<!-- Tv e Famosos -->
-		<?php show_4posts_two_columns( 'tv-e-famosos', 'Tv e Famosos', 4); ?>	
-		<hr class="block-line">
-
-		<!-- Anúncio 6 -->
+		<!-- Anúncio 9 -->
 		<div class="ads-horizontal">
 			<?php echo do_shortcode( '[anuncio_gov-1140x410]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
+
+		<!-- Tv e Famosos -->
+		<?php show_4posts_two_columns( 'tv-e-famosos', 'Tv e Famosos', 4); ?>	
+		<hr class="block-line">
 
 	</div><!-- home-wrap -->	
 

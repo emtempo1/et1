@@ -118,7 +118,7 @@
         span.titulo-secao, span.title-4h, .title-4posts {	
             display: block;
             grid-area: title;
-            margin: -10px 0;  
+            margin: 0 0 -22.5px 0;  
             font-size: 28px;
             font-weight: 600;
             letter-spacing: 3px;
@@ -156,6 +156,9 @@
         .line-height-6 {height: 6px; background-color: var(--separador)}
         .line-height-10 {height: 10px; background-color: var(--separador)}
         .line-height-20 {height: 20px; background-color: var(--separador)}
+
+        .line-height-1, .line-height-2, .line-height-6, .line-height-10, .line-height-20 {display: none;}
+
     /* Geral */
 
 
@@ -281,9 +284,6 @@
         }
         .d6-conteudo h2 {
             margin: 5px 0;
-        }
-        .destaque-6 .line-height-20 {
-            display: none;
         }
     /* Destaque Principal */
 
@@ -456,11 +456,15 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             column-gap: 30px;
+            margin-top: 30px;
         }
         .cat-col {
             display: grid;
             grid-template-areas: 'title';
             row-gap: 30px;
+        }
+        .cat-col .titulo-secao {
+            margin-bottom: -22.5px;
         }
         .cc-thumbnail, .cc-thumbnail img {
             height: 300px;
@@ -501,7 +505,10 @@
             }
             hr.block-line {
                 display: none
-            }				
+            }
+            .line-height-20 {
+                display: block;
+            }
         /* Geral */
 
 
@@ -583,9 +590,6 @@
             }
             .d6-conteudo .c-subtitulo {
                 font-size: 12px;
-            }
-            .destaque-6 .line-height-20 {
-                display: block;
             }
         /* Destaque Principal */
 
@@ -682,31 +686,30 @@
         /* Categoria Quatro Posts */
 
         /* Categoria Três Colunas */
-        .cat-3cols {
-            display: flex;
-            flex-direction: column;
-        }
-        .cat-col {
-            display: block;
-            margin-top: 30px;
-        }
-        .cat-col .titulo-secao {
-            width: 90%;
-            margin: auto;
-        }
-        .cc-thumbnail {
-            border-radius: 0;
-            margin-bottom: 30px;
-        }
-        .cc-scnd {
-            display: block;
-            width: 90%;
-            height: fit-content;
-            margin: auto auto 30px auto;
-        }
-        .ccs-thumb img {
-            display: none;
-        }
+            .cat-3cols {
+                display: flex;
+                flex-direction: column;
+            }
+            .cat-col {
+                display: block;
+            }
+            .cat-col .titulo-secao {
+                width: 90%;
+                margin: 5%;
+            }
+            .cc-thumbnail {
+                border-radius: 0;
+                margin-bottom: 30px;
+            }
+            .cc-scnd {
+                display: block;
+                width: 90%;
+                height: fit-content;
+                margin: auto auto 30px auto;
+            }
+            .ccs-thumb img {
+                display: none;
+            }
     /* Categoria Três Colunas */
 
     }

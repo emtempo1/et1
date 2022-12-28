@@ -196,186 +196,83 @@ function show_4posts_two_columns( $categoria_slug, $categoria_nome, $qtde) { ?>
 
 
 // Mostra posts verticalmente com 1 em destaque no bloco de 3 colunas
+function cat_column ( $categoria_slug, $categoria_nome ) { ?>
+
+    <div class="cat-col">
+        
+        <span class="titulo-secao c-ed-<?php echo $categoria_slug ?>"><a href="https://emtempo1.com/<?php echo $categoria_slug ?>"><?php echo $categoria_nome ?></a></span>
+        <?php 
+        $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $categoria_nome ) ); 
+        $aux = 0;
+        while($custom_query->have_posts()) : $custom_query->the_post(); 
+            $aux = $aux + 1; 
+            if ($aux == 1) { ?>
+                <div class="cc-thumbnail">
+                    <?php 
+                    if ( has_post_thumbnail() ) { ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail( '', array( 'class' => 'destaque-img' ) ); ?>
+                        </a>
+                    <?php
+                    } else { ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <img src="http://localhost/2023/emtempo1/wp-content/uploads/2022/12/no-image.png" alt="">
+                        </a>
+                    <?php	
+                    } 
+                    ?>
+                    <div class="cc-title">
+                        <a href="<?php the_permalink(); ?>"><?php the_title("<h2>", "</h2>") ?></a>
+                    </div>
+                </div>
+            <?php
+            } else if ($aux > 1) {  ?>
+                <div class="cc-scnd">
+                    <div class="ccs-thumb">
+                        <?php 
+                        if ( has_post_thumbnail() ) { ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail(); ?>
+                            </a>
+                        <?php
+                        } else { ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <img src="http://localhost/2023/emtempo1/wp-content/uploads/2022/12/no-image.png" alt="">
+                            </a>
+                        <?php	
+                        } 
+                        ?>	
+                    </div>
+                    <div class="ccs-title">
+                        <span class="chapeu-default c-ed-<?php echo $categoria_slug ?>"><?php echo get_field( "chapeu" ) ?></span>
+                        <a href="<?php the_permalink(); ?>"><h2 class="c-subtitulo" style="font-size: 17px; margin: 5px 0"><?php the_title() ?></h2></a>
+                        <span class="chapeu-default c-ed-<?php echo $categoria_slug ?>" style="margin-top: 7.5px"><?php echo time_ago() ?></span>
+                    </div>
+                </div>
+            <?php
+            }						
+            if ($aux == 3) {
+                break;
+            }
+        endwhile; ?>
+
+        <!-- Linha divisória p/ mobile -->
+		<div class="line-height-20 mt-30"></div>
+
+    </div>
+
+<?php
+}
+
 function show_vertical_posts_3_columns ( $cat_slug_1, $cat_nome_1, $cat_slug_2, $cat_nome_2, $cat_slug_3, $cat_nome_3 ){ ?>
 
     <div class="cat-3cols">
+        <?php cat_column ( $cat_slug_1, $cat_nome_1 ) ?>
+        <?php cat_column ( $cat_slug_2, $cat_nome_2 ) ?>
+        <?php cat_column ( $cat_slug_3, $cat_nome_3 ) ?>
+    </div>
 
-        <div class="cat-col">
-            <span class="titulo-secao c-ed-<?php echo $cat_slug_1 ?>" style="padding-bottom: 30px"><a href="https://emtempo1.com/<?php echo $cat_slug_1 ?>"><?php echo $cat_nome_1 ?></a></span>
-            <?php 
-            $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $cat_nome_1 ) ); 
-            $aux = 0;
-            while($custom_query->have_posts()) : $custom_query->the_post(); 
-                $aux = $aux + 1; 
-                if ($aux == 1) { ?>
-                    <div class="cc-thumbnail">
-                        <?php 
-                        if ( has_post_thumbnail() ) { ?>
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail( '', array( 'class' => 'destaque-img' ) ); ?>
-                            </a>
-                        <?php
-                        } else { ?>
-                            <a href="<?php the_permalink(); ?>">
-                                <img src="http://localhost/2023/emtempo1/wp-content/uploads/2022/12/no-image.png" alt="">
-                            </a>
-                        <?php	
-                        } 
-                        ?>
-                        <div class="cc-title">
-                            <a href="<?php the_permalink(); ?>"><?php the_title("<h2>", "</h2>") ?></a>
-                        </div>
-                    </div>
-                <?php
-                } else if ($aux > 1) {  ?>
-                    <div class="cc-scnd">
-                        <div class="ccs-thumb">
-                            <?php 
-                            if ( has_post_thumbnail() ) { ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail(); ?>
-                                </a>
-                            <?php
-                            } else { ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <img src="http://localhost/2023/emtempo1/wp-content/uploads/2022/12/no-image.png" alt="">
-                                </a>
-                            <?php	
-                            } 
-                            ?>	
-                        </div>
-                        <div class="ccs-title">
-                            <span class="chapeu-default c-ed-<?php echo $cat_slug_1 ?>"><?php echo get_field( "chapeu" ) ?></span>
-                            <a href="<?php the_permalink(); ?>"><h2 class="c-subtitulo" style="font-size: 17px; margin: 5px 0"><?php the_title() ?></h2></a>
-                            <span class="chapeu-default c-ed-<?php echo $cat_slug_1 ?>" style="margin-top: 7.5px"><?php echo time_ago() ?></span>
-                        </div>
-                    </div>
-                <?php
-                }						
-                if ($aux == 3) {
-                    break;
-                }
-            endwhile; ?>
-        </div>
-
-        <div class="cat-col">
-            <span class="titulo-secao c-ed-<?php echo $cat_slug_2 ?>" style="padding-bottom: 30px"><a href="https://emtempo1.com/<?php echo $cat_slug_2 ?>"><?php echo $cat_nome_2 ?></a></span>
-            <?php 
-            $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $cat_nome_2 ) ); 
-            $aux = 0;
-            while($custom_query->have_posts()) : $custom_query->the_post(); 
-                $aux = $aux + 1; 
-                if ($aux == 1) { ?>
-                    <div class="cc-thumbnail">
-                        <?php 
-                        if ( has_post_thumbnail() ) { ?>
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail( '', array( 'class' => 'destaque-img' ) ); ?>
-                            </a>
-                        <?php
-                        } else { ?>
-                            <a href="<?php the_permalink(); ?>">
-                                <img src="http://localhost/2023/emtempo1/wp-content/uploads/2022/12/no-image.png" alt="">
-                            </a>
-                        <?php	
-                        } 
-                        ?>
-                        <div class="cc-title">
-                            <a href="<?php the_permalink(); ?>"><?php the_title("<h2>", "</h2>") ?></a>
-                        </div>
-                    </div>
-                <?php
-                } else if ($aux > 1) {  ?>
-                    <div class="cc-scnd">
-                        <div class="ccs-thumb">
-                            <?php 
-                            if ( has_post_thumbnail() ) { ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail(); ?>
-                                </a>
-                            <?php
-                            } else { ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <img src="http://localhost/2023/emtempo1/wp-content/uploads/2022/12/no-image.png" alt="">
-                                </a>
-                            <?php	
-                            } 
-                            ?>	
-                        </div>
-                        <div class="ccs-title">
-                            <span class="chapeu-default c-ed-<?php echo $cat_slug_2 ?>"><?php echo get_field( "chapeu" ) ?></span>
-                            <a href="<?php the_permalink(); ?>"><h2 class="c-subtitulo" style="font-size: 17px; margin: 5px 0"><?php the_title() ?></h2></a>
-                            <span class="chapeu-default c-ed-<?php echo $cat_slug_2 ?>" style="margin-top: 7.5px"><?php echo time_ago() ?></span>
-                        </div>
-                    </div>
-                <?php
-                }						
-                if ($aux == 3) {
-                    break;
-                }
-            endwhile; ?>
-        </div>
-
-        <div class="cat-col">
-            <span class="titulo-secao c-ed-<?php echo $cat_slug_3 ?>" style="padding-bottom: 30px"><a href="https://emtempo1.com/<?php echo $cat_slug_3 ?>"><?php echo $cat_nome_3 ?></a></span>
-            <?php 
-            $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $cat_nome_3 ) ); 
-            $aux = 0;
-            while($custom_query->have_posts()) : $custom_query->the_post(); 
-                $aux = $aux + 1; 
-                if ($aux == 1) { ?>
-                    <div class="cc-thumbnail">
-                        <?php 
-                        if ( has_post_thumbnail() ) { ?>
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail( '', array( 'class' => 'destaque-img' ) ); ?>
-                            </a>
-                        <?php
-                        } else { ?>
-                            <a href="<?php the_permalink(); ?>">
-                                <img src="http://localhost/2023/emtempo1/wp-content/uploads/2022/12/no-image.png" alt="">
-                            </a>
-                        <?php	
-                        } 
-                        ?>
-                        <div class="cc-title">
-                            <a href="<?php the_permalink(); ?>"><?php the_title("<h2>", "</h2>") ?></a>
-                        </div>
-                    </div>
-                <?php
-                } else if ($aux > 1) {  ?>
-                    <div class="cc-scnd">
-                        <div class="ccs-thumb">
-                            <?php 
-                            if ( has_post_thumbnail() ) { ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail(); ?>
-                                </a>
-                            <?php
-                            } else { ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <img src="http://localhost/2023/emtempo1/wp-content/uploads/2022/12/no-image.png" alt="">
-                                </a>
-                            <?php	
-                            } 
-                            ?>	
-                        </div>
-                        <div class="ccs-title">
-                            <span class="chapeu-default c-ed-<?php echo $cat_slug_3 ?>"><?php echo get_field( "chapeu" ) ?></span>
-                            <a href="<?php the_permalink(); ?>"><h2 class="c-subtitulo" style="font-size: 17px; margin: 5px 0"><?php the_title() ?></h2></a>
-                            <span class="chapeu-default c-ed-<?php echo $cat_slug_3 ?>" style="margin-top: 7.5px"><?php echo time_ago() ?></span>
-                        </div>
-                    </div>
-                <?php
-                }						
-                if ($aux == 3) {
-                    break;
-                }
-            endwhile; ?>
-        </div>
-
-    </div> <?php
-
+<?php
 }
 
 
