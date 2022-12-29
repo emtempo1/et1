@@ -199,4 +199,67 @@
     add_shortcode('anuncio_et1_home_horizontal_1', 'admanager_et1_home_horizontal_1');
 
 
+    // [anuncio_et1_home_horizontal_2]
+    function admanager_et1_home_horizontal_2() {
+        return '<!-- /22860165856/et1_home_horizontal_2 -->
+        <div id="div-gpt-ad-1672339218327-0" style="min-width: 728px; min-height: 90px;">
+          <script>
+            googletag.cmd.push(function() { googletag.display("div-gpt-ad-1672339218327-0"); });
+          </script>
+        </div>';
+    }
+    add_shortcode('anuncio_et1_home_horizontal_2', 'admanager_et1_home_horizontal_2');
+
+
+    // [anuncio_et1_home_horizontal_3]
+    function admanager_et1_home_horizontal_3() {
+        return '<!-- /22860165856/et1_home_horizontal_3 -->
+        <div id="div-gpt-ad-1672339527255-0" style="min-width: 728px; min-height: 90px;">
+          <script>
+            googletag.cmd.push(function() { googletag.display("div-gpt-ad-1672339527255-0"); });
+          </script>
+        </div>';
+    }
+    add_shortcode('anuncio_et1_home_horizontal_3', 'admanager_et1_home_horizontal_3');
+
+
+    // [anuncio_et1_home_horizontal_4]
+    function admanager_et1_home_horizontal_4() {
+        return '<!-- /22860165856/et1_home_horizontal_4 -->
+        <div id="div-gpt-ad-1672339685198-0" style="min-width: 728px; min-height: 90px;">
+          <script>
+            googletag.cmd.push(function() { googletag.display("div-gpt-ad-1672339685198-0"); });
+          </script>
+        </div>';
+    }
+    add_shortcode('anuncio_et1_home_horizontal_4', 'admanager_et1_home_horizontal_4');
+
+
+    // [anuncio_et1_home_horizontal_5]
+    function admanager_et1_home_horizontal_5() {
+        return '<!-- /22860165856/et1_home_horizontal_5 -->
+        <div id="div-gpt-ad-1672339843713-0" style="min-width: 728px; min-height: 90px;">
+          <script>
+            googletag.cmd.push(function() { googletag.display("div-gpt-ad-1672339843713-0"); });
+          </script>
+        </div>';
+    }
+    add_shortcode('anuncio_et1_home_horizontal_5', 'admanager_et1_home_horizontal_5');
+
+
+    // [anuncio_et1_home_horizontal_6]
+    function admanager_et1_home_horizontal_6() {
+        return '<!-- /22860165856/et1_home_horizontal_6 -->
+        <div id="div-gpt-ad-1672340150077-0" style="min-width: 728px; min-height: 90px;">
+          <script>
+            googletag.cmd.push(function() { googletag.display("div-gpt-ad-1672340150077-0"); });
+          </script>
+        </div>';
+    }
+    add_shortcode('anuncio_et1_home_horizontal_6', 'admanager_et1_home_horizontal_6');
+
+
+
+
+
 ?>

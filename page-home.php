@@ -222,7 +222,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 3 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_gov-1140x90]' ) ?>
+			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_2]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -419,7 +419,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 6 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_gov-1140x140]' ) ?>
+			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_3]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 		
@@ -433,7 +433,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 7 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_gov-1140x190]' ) ?>
+			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_4]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -451,7 +451,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 8 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_gov-1140x285]' ) ?>
+			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_5]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -465,7 +465,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 9 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_gov-1140x410]' ) ?>
+			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_6]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 

@@ -331,15 +331,19 @@ function my_custom_head_code() {
         googletag.defineSlot("/22860165856/et1_home_300x250_2", [300, 250], "div-gpt-ad-1671737512675-0").addService(googletag.pubads());
         googletag.defineSlot("/22860165856/et1_home_300x600_1", [300, 600], "div-gpt-ad-1671819763493-0").addService(googletag.pubads());
         googletag.defineSlot("/22860165856/et1_home_horizontal_1", [[1140, 90], [728, 90], [1140, 140], [1140, 250], [1140, 190], [1140, 410]], "div-gpt-ad-1671821845656-0").addService(googletag.pubads());
+        googletag.defineSlot("/22860165856/et1_home_horizontal_2", [[1140, 140], [728, 90], [1140, 190], [1140, 410], [1140, 285], [1140, 90]], "div-gpt-ad-1672339218327-0").addService(googletag.pubads());
+        googletag.defineSlot("/22860165856/et1_home_horizontal_3", [[1140, 190], [1140, 410], [1140, 90], [728, 90], [1140, 285], [1140, 140]], "div-gpt-ad-1672339527255-0").addService(googletag.pubads());
+        googletag.defineSlot("/22860165856/et1_home_horizontal_4", [[1140, 190], [1140, 410], [728, 90], [1140, 90], [1140, 285], [1140, 140]], "div-gpt-ad-1672339685198-0").addService(googletag.pubads());
+        googletag.defineSlot("/22860165856/et1_home_horizontal_5", [[1140, 190], [1140, 410], [728, 90], [1140, 90], [1140, 285], [1140, 140]], "div-gpt-ad-1672339843713-0").addService(googletag.pubads());
+        googletag.defineSlot("/22860165856/et1_home_horizontal_6", [[1140, 140], [1140, 190], [1140, 410], [1140, 90], [728, 90], [1140, 285]], "div-gpt-ad-1672340150077-0").addService(googletag.pubads());
         
-        googletag.defineSlot("/245408516/et1_300x250_geral", [[300, 600], [300, 250]], "div-gpt-ad-1671132062708-0").addService(googletag.pubads());
-        googletag.defineSlot("/245408516/et1_1140x90_geral", [[1140, 140], [1140, 190], [1140, 410], [1140, 285], [1140, 90]], "div-gpt-ad-1671469270170-0").addService(googletag.pubads());
         googletag.pubads().enableSingleRequest();
         googletag.enableServices();
       });
     </script>';
 }
 add_action( 'wp_head', 'my_custom_head_code' );
+
 
 
 // Inclui código no footer
