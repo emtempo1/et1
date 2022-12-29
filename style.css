@@ -170,9 +170,8 @@
             margin: 30px auto;
         }
         .ads-horizontal {
-            max-width: 1140px; 
+            width: fit-content; 
             margin: 45px auto;
-            display: block;
         }
     /* Anúncios */
 
