@@ -304,13 +304,26 @@ function category_link($categoria) {
 
 
 // Inclui código no head 
-function my_custom_head_code() { 
-    echo '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7361015084318825" crossorigin="anonymous"></script>';
+function my_custom_head_code() {
+    // AdSense
+    echo '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7361015084318825"></script>';
+    // AdManager
     echo '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>';
+    // Adword
+    echo '<script async src="https://www.googletagmanager.com/gtag/js?id=G-597ET5SZXQ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag("js", new Date());
 
+            gtag("config", "G-597ET5SZXQ");
+        </script>';
+
+    // Swiffy Slider
     echo '<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>';
     echo '<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">';
 
+    // AdManager
     echo '<script>
       window.googletag = window.googletag || {cmd: []};
       googletag.cmd.push(function() {
