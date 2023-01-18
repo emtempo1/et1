@@ -273,13 +273,10 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 			<div class="un-right">
 				<!-- Anúncio 4 -->
-				<div class="conteudo-especial">
-					<span>Conteúdo Especial</span>
-					<div><?php echo do_shortcode( '[anuncio_et1_home_300x250_1]' ); ?></div>
-				</div>
+				<div class="conteudo-especial"><?php echo do_shortcode( '[anuncio_et1_home_300x250_1]' ); ?></div>
 
-				<div class="artic-grid mb-15"> <!-- Últimos Artigos -->
-					<div class="artic-top">
+				<div class="artic-grid mb-30"> <!-- Últimos Artigos -->
+					<div class="artic-top mb-15">
 						<span class="titulo-opiniao-main c-titulo">Últimos Artigos</span>
 						<span class="ler-mais"><a href="<?php echo category_link('Opinião') ?>">leia mais</a></span>
 					</div>
@@ -298,70 +295,14 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 							</div>
 						</div>
 						<?php
-						if ($aux == 2) {
+						if ($aux == 4) {
 							break;
 						}
 					endwhile;
 					wp_reset_postdata();
 					?>
-				</div>
-
-				<div class="artic-grid"> <!-- Editorial -->
-					<div class="artic-top">
-						<span class="titulo-opiniao-secondary c-titulo">Editorial</span>
-						<span class="ler-mais"><a href="<?php echo get_site_url() .'/author/editorial'?>">leia mais</a></span>
-					</div>
-					<?php 
-					$custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => 'opiniao', 'author__in' => array( 23 ) ) ); 
-					$aux = 0;
-					while($custom_query->have_posts()) : $custom_query->the_post(); 
-						$aux = $aux + 1; ?>							
-						<div class="articulista artic-secondary">			
-							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
-								<?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
-							</a>					
-							<div class="artic-data">
-								<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
-								<?php echo '<h2>' . get_the_author() . '</h2>'; ?>
-							</div>
-						</div>
-						<?php
-						if ($aux == 1) {
-							break;
-						}
-					endwhile;
-					wp_reset_postdata();
-					?>
-				</div>
-
-				<div class="artic-grid"> <!-- Holofote -->
-					<div class="artic-top">
-						<span class="titulo-opiniao-secondary c-titulo">Holofote</span>
-						<span class="ler-mais"><a href="<?php echo get_site_url() .'/author/holofote' ?>">leia mais</a></span>
-					</div>
-					<?php 
-					$custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => 'opiniao', 'author__in' => array( 45 ) ) ); 
-					$aux = 0;
-					while($custom_query->have_posts()) : $custom_query->the_post(); 
-						$aux = $aux + 1; ?>							
-						<div class="articulista artic-secondary" style="margin-bottom: 12px">			
-							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
-								<?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
-							</a>					
-							<div class="artic-data">
-								<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
-								<?php echo '<h2>' . get_the_author() . '</h2>'; ?>
-							</div>
-						</div>
-						<?php
-						if ($aux == 1) {
-							break;
-						}
-					endwhile;
-					wp_reset_postdata();
-					?>
-				</div>
-			</div>			
+				</div>	
+			</div>
 		</div>
 		<hr class="block-line">	
 
