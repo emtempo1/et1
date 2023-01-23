@@ -230,7 +230,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 		<div class="ultimas-noticias">
 			<div class="un-left">
 				<span class="titulo-secao c-titulo-default" style="margin-bottom: 20px">
-					<a href="<?php echo get_site_url() .'/ultimas-noticias' ?>">Últimas Notícias</a>
+					<a href="<?php echo get_site_url() .'/ultimas' ?>">Últimas Notícias</a>
 				</span>				
 				<div class="unl-bloco">					
 					<?php 
@@ -387,7 +387,12 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 		<hr class="block-line">
 		
 		<!-- Brasil, Mundo e Mundo Selvagem -->
-		<?php show_vertical_posts_3_columns( 'brasil', 'Brasil', 'mundo', 'Mundo', 'mundo-selvagem', 'Mundo Selvagem'); ?>	
+		<?php show_vertical_posts_3_columns( 
+			'by_category', 
+			'brasil', 'Brasil', 
+			'mundo', 'Mundo', 
+			'mundo-selvagem', 'Mundo Selvagem' 
+			); ?>	
 		<hr class="block-line">
 
 		<!-- Anúncio 8 -->
@@ -401,7 +406,12 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 		<hr class="block-line">
 
 		<!-- Saúde, Ciência & Educação e Esporte -->
-		<?php show_vertical_posts_3_columns( 'saude', 'Saúde', 'ciencia-educacao', 'Ciência & Educação', 'esporte', 'Esporte'); ?>	
+		<?php show_vertical_posts_3_columns( 
+			'by_category', 
+			'saude', 'Saúde', 
+			'ciencia-educacao', 'Ciência & Educação', 
+			'esporte', 'Esporte' 
+			); ?>	
 		<hr class="block-line">
 
 		<!-- Anúncio 9 -->
@@ -413,6 +423,15 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 		<!-- Tv e Famosos -->
 		<?php show_4posts_two_columns( 'tv-e-famosos', 'Tv e Famosos', 4); ?>	
 		<hr class="block-line">
+
+		<!-- Impressos 
+		<?php /* show_vertical_posts_3_columns( 
+			'by_tag', 
+			'jornal-emtempo1', 'Jornal Emtempo1', 
+			'jornal-na-hora', 'Jornal Na Hora', 
+			'jornal-metropolitano', 'Jornal Metropolitano	' 
+			); */?>	
+		<hr class="block-line"> -->
 
 	</div><!-- home-wrap -->	
 

@@ -128,7 +128,7 @@ function show_4posts_two_columns( $categoria_slug, $categoria_nome, $qtde) { ?>
 
     <div class="cat-2posts-2cols">
         <div class="categoria-quatro-posts">
-            <span class="titulo-secao c-ed-<?php echo $categoria_slug ?>"><a href="https://emtempo1.com/<?php echo $categoria_slug ?>"><?php echo $categoria_nome ?></a></span>
+            <span class="titulo-secao c-ed-<?php echo $categoria_slug ?>"><a href="https://emtempo1.com.br/<?php echo $categoria_slug ?>"><?php echo $categoria_nome ?></a></span>
             <?php 
             $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $categoria_nome ) ); 
             $aux = 0;
@@ -162,7 +162,7 @@ function show_4posts_two_columns( $categoria_slug, $categoria_nome, $qtde) { ?>
 		
     <div class="cat-2posts-2cols-mob">
         <div class="categoria-quatro-posts-mob">
-            <span class="title-4posts c-ed-<?php echo $categoria_slug ?>"><a href="https://emtempo1.com/<?php echo $categoria_slug ?>"><?php echo $categoria_nome ?></a></span>
+            <span class="title-4posts c-ed-<?php echo $categoria_slug ?>"><a href="https://emtempo1.com.br/<?php echo $categoria_slug ?>"><?php echo $categoria_nome ?></a></span>
             
             <?php 
             $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $categoria_nome ) ); 
@@ -196,13 +196,18 @@ function show_4posts_two_columns( $categoria_slug, $categoria_nome, $qtde) { ?>
 
 
 // Mostra posts verticalmente com 1 em destaque no bloco de 3 colunas
-function cat_column ( $categoria_slug, $categoria_nome ) { ?>
+function post_column ( $flag, $slug, $nome ) { ?>
 
     <div class="cat-col">
         
-        <span class="titulo-secao c-ed-<?php echo $categoria_slug ?>"><a href="https://emtempo1.com/<?php echo $categoria_slug ?>"><?php echo $categoria_nome ?></a></span>
+        <span class="titulo-secao c-ed-<?php echo $slug ?>"><a href="https://emtempo1.com.br/<?php echo $slug ?>"><?php echo $nome ?></a></span>
         <?php 
-        $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $categoria_nome ) ); 
+
+        if ( $flag == "by_category" ) {
+            $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $nome ) ); 
+        } else {
+            $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'tag' => $slug ) ); 
+        }
         $aux = 0;
         while($custom_query->have_posts()) : $custom_query->the_post(); 
             $aux = $aux + 1; 
@@ -244,9 +249,9 @@ function cat_column ( $categoria_slug, $categoria_nome ) { ?>
                         ?>	
                     </div>
                     <div class="ccs-title">
-                        <span class="chapeu-default c-ed-<?php echo $categoria_slug ?>"><?php echo get_field( "chapeu" ) ?></span>
+                        <span class="chapeu-default c-ed-<?php echo $slug ?>"><?php echo get_field( "chapeu" ) ?></span>
                         <a href="<?php the_permalink(); ?>"><h2 class="c-subtitulo" style="font-size: 17px; margin: 5px 0"><?php the_title() ?></h2></a>
-                        <span class="chapeu-default c-ed-<?php echo $categoria_slug ?>" style="margin-top: 7.5px"><?php echo time_ago() ?></span>
+                        <span class="chapeu-default c-ed-<?php echo $slug ?>" style="margin-top: 7.5px"><?php echo time_ago() ?></span>
                     </div>
                 </div>
             <?php
@@ -264,12 +269,12 @@ function cat_column ( $categoria_slug, $categoria_nome ) { ?>
 <?php
 }
 
-function show_vertical_posts_3_columns ( $cat_slug_1, $cat_nome_1, $cat_slug_2, $cat_nome_2, $cat_slug_3, $cat_nome_3 ){ ?>
+function show_vertical_posts_3_columns ( $flag, $slug_1, $nome_1, $slug_2, $nome_2, $slug_3, $nome_3 ){ ?>
 
     <div class="cat-3cols">
-        <?php cat_column ( $cat_slug_1, $cat_nome_1 ) ?>
-        <?php cat_column ( $cat_slug_2, $cat_nome_2 ) ?>
-        <?php cat_column ( $cat_slug_3, $cat_nome_3 ) ?>
+        <?php post_column ( $flag, $slug_1, $nome_1 ) ?>
+        <?php post_column ( $flag, $slug_2, $nome_2 ) ?>
+        <?php post_column ( $flag, $slug_3, $nome_3 ) ?>
     </div>
 
 <?php
