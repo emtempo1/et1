@@ -235,7 +235,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 				<div class="unl-bloco">					
 					<?php 
 					$aux = 0;
-					$custom_query = new WP_Query( array( 'posts_per_page' => -1 ) );
+					$custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category__not_in' => 2463 ) ); //Impressos não incluídos
 					while($custom_query->have_posts()) : $custom_query->the_post(); 						
 						$aux = $aux + 1;
 						?>
