@@ -385,3 +385,22 @@ add_action( 'wp_footer', 'my_custom_end_body_code' );
 
 // Web Vitals Adjust
 add_filter( 'zeen_web_vitals', '__return_true' );
+
+// Personaliza o icone na tela de login 
+function custom_login_logo() {
+    echo '<style>
+        body.login {
+            background-image: url(http://localhost/emtempo1/wp-content/uploads/2023/01/suspension-bridge-959853.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        h1 a {border-radius: 30%;}
+    </style>';
+}
+add_action('login_head', 'custom_login_logo');
+
+function custom_login_logo_url() {
+    return home_url();
+}
+add_filter('login_headerurl', 'custom_login_logo_url');
