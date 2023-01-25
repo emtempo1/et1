@@ -281,7 +281,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 						<span class="ler-mais"><a href="<?php echo category_link('Opinião') ?>">leia mais</a></span>
 					</div>
 					<?php 
-					$custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => 'opiniao', 'author__not_in' => array( 23, 45 ) ) ); 
+					$custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => 'opiniao' ) ); //, 'author__not_in' => array( 23, 45 )
 					$aux = 0;
 					while($custom_query->have_posts()) : $custom_query->the_post(); 
 						$aux = $aux + 1; ?>							
