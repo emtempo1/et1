@@ -22,7 +22,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 1 -->
 		<div class="ads-horizontal-topo">
-			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_1]' ) ?>
+			<?php //echo do_shortcode( '[anuncio_et1_home_horizontal_1]' ) ?>
 			<style>.ads-horizontal-topo iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -222,7 +222,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 3 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_2]' ) ?>
+			<?php //echo do_shortcode( '[anuncio_et1_home_horizontal_2]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -360,7 +360,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 6 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_3]' ) ?>
+			<?php //echo do_shortcode( '[anuncio_et1_home_horizontal_3]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 		
@@ -374,7 +374,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 7 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_4]' ) ?>
+			<?php //echo do_shortcode( '[anuncio_et1_home_horizontal_4]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -397,7 +397,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 8 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_5]' ) ?>
+			<?php //echo do_shortcode( '[anuncio_et1_home_horizontal_5]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -416,7 +416,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 
 		<!-- Anúncio 9 -->
 		<div class="ads-horizontal">
-			<?php echo do_shortcode( '[anuncio_et1_home_horizontal_6]' ) ?>
+			<?php //echo do_shortcode( '[anuncio_et1_home_horizontal_6]' ) ?>
 			<style>.ads-horizontal iframe {margin-bottom: 0 !important}</style>
 		</div>
 
@@ -429,7 +429,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 			'by_tag', 
 			'jornal-emtempo1', 'Jornal Emtempo1', 
 			'jornal-na-hora', 'Jornal Na Hora', 
-			'jornal-metropolitano', 'Jornal Metropolitano	' 
+			'jornal-metropolitano', 'Jornal Metropolitano' 
 			); */?>	
 		<hr class="block-line"> -->
 
