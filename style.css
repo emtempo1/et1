@@ -23,9 +23,9 @@
     /* --ed-educacao: #f1c13b; */
     --ed-esporte: #db4900;
     --ed-gastronomia: #c17d11;
-    --ed-impresso-emtempo1: #3aa0cc; /* a confirmar */
-    --ed-impresso-metropolitano: #012677; /* a confirmar */
-    --ed-impresso-na-hora: #ba0909; /* a confirmar */
+    --ed-jornal-emtempo1: #00A7E7;
+    --ed-jornal-metropolitano: #242E70;
+    --ed-jornal-na-hora: #BD1E2D;
     --ed-mundo: #31d790;
     --ed-mundo-selvagem: #319200;
     --ed-opiniao: #985f35; 
@@ -59,6 +59,9 @@
 /* .c-ed-educacao {color: var(--ed-educacao)} */
 .c-ed-esporte {color: var(--ed-esporte)}
 .c-ed-gastronomia {color: var(--ed-gastronomia)}
+.c-ed-jornal-emtempo1 {color: var(--ed-jornal-emtempo1)}
+.c-ed-jornal-na-hora {color: var(--ed-jornal-na-hora)}
+.c-ed-jornal-metropolitano {color: var(--ed-jornal-metropolitano)}
 .c-ed-mundo {color: var(--ed-mundo)}
 .c-ed-mundo-selvagem {color: var(--ed-mundo-selvagem)}
 .c-ed-opiniao {color: var(--ed-opiniao)}
