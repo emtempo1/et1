@@ -399,8 +399,8 @@ function custom_login_logo_url() {
 }
 add_filter('login_headerurl', 'custom_login_logo_url');
 
-//Lógica para não mostrar os destaques nas últimas ~By BRYAN, Marcos (2023)
-//Adepto da POG (Programação Orientada à Gambiarra)
+//Lógica para não mostrar os destaques nas últimas
+//~By BRYAN, Marcos (2023), adepto da POG (Programação Orientada à Gambiarra)
 function get_the_destacation ($grupo, $campo){
     $custom_query = new WP_Query( array( 'posts_per_page' => -1 ) );	
     while($custom_query->have_posts()) : $custom_query->the_post(); 
