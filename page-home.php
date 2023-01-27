@@ -438,14 +438,14 @@ array_push($destacation,
 		<?php show_4posts_two_columns( 'tv-e-famosos', 'Tv e Famosos', 4); ?>	
 		<hr class="block-line">
 
-		<!-- Impressos 
-		<?php /* show_vertical_posts_3_columns( 
+		<!-- Impressos -->
+		<?php show_vertical_posts_3_columns( 
 			'by_tag', 
 			'jornal-emtempo1', 'Jornal Emtempo1', 
 			'jornal-na-hora', 'Jornal Na Hora', 
 			'jornal-metropolitano', 'Jornal Metropolitano' 
-			); */?>	
-		<hr class="block-line"> -->
+			);?>	
+		<hr class="block-line">
 	
 	</div><!-- home-wrap -->	
 
