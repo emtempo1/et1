@@ -13,6 +13,17 @@ $args['is_page'] = 'pages_';
 $post_wrap_class = zeen_post_wrap_class( $post->ID, $args, array( 'page-wrap' ) );
 $layout = zeen_get_article_layout( $post->ID );
 $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
+
+$destacation = array();
+array_push($destacation, 
+	get_the_destacation ('destaques_especiais', 'destaque_0'),
+	get_the_destacation ('destaques_especiais', 'destaque_6'),
+	get_the_destacation ('destaques_principais', 'destaque_1'),
+	get_the_destacation ('destaques_principais', 'destaque_2'),
+	get_the_destacation ('destaques_principais', 'destaque_3'),
+	get_the_destacation ('destaques_principais', 'destaque_4'),
+	get_the_destacation ('destaques_principais', 'destaque_5')
+);
 ?>
 
 
@@ -236,32 +247,35 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 					<?php 
 					$aux = 0;
 					$custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category__not_in' => 2463 ) ); //Impressos não incluídos
-					while($custom_query->have_posts()) : $custom_query->the_post(); 						
-						$aux = $aux + 1;
-						?>
-						<a href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail() ?>
-						</a>						
-						<div class="unlb-conteudo">
-							<span class="chapeu-default c-ed-<?php echo show_category_slug() ?>"><?php echo get_field( "chapeu" ) ?></span>
-							<a href="<?php the_permalink(); ?>"><h2 class="c-titulo"><?php the_title() ?></h2></a>
-							<span class="linha-fina-default c-subtitulo"><?php echo get_field( "linha_fina" ) ?></span>	
-							<span class="editoria-default c-ed-<?php echo show_category_slug() ?>">
-								<a href="<?php echo category_link(show_category_name()) ?>">
-									<?php echo mb_strtoupper(show_category_name()) ?>
-								</a>
-							</span>
-						</div>
-						<div class="unlb-conteudo-mob">
-							<span class="chapeu-default c-ed-<?php echo show_category_slug() ?>" style="margin-bottom: 5px"><?php echo get_field( "chapeu" ) ?></span>
-							<a href="<?php the_permalink(); ?>"><h2 class="c-titulo"><?php the_title() ?></h2></a>
-							<span class="editoria-default c-ed-<?php echo show_category_slug() ?>">
-								<a href="<?php echo category_link(show_category_name()) ?>">
-									<?php echo mb_strtoupper(show_category_name()) ?>
-								</a>
-							</span>
-						</div>
+					while($custom_query->have_posts()) : $custom_query->the_post(); 		
+					
+						if ( !in_array(get_the_title(), $destacation) ) :
+							$aux = $aux + 1;
+							?>
+							<a href="<?php the_permalink(); ?>">
+								<?php the_post_thumbnail() ?>
+							</a>						
+							<div class="unlb-conteudo">
+								<span class="chapeu-default c-ed-<?php echo show_category_slug() ?>"><?php echo get_field( "chapeu" ) ?></span>
+								<a href="<?php the_permalink(); ?>"><h2 class="c-titulo"><?php the_title() ?></h2></a>
+								<span class="linha-fina-default c-subtitulo"><?php echo get_field( "linha_fina" ) ?></span>	
+								<span class="editoria-default c-ed-<?php echo show_category_slug() ?>">
+									<a href="<?php echo category_link(show_category_name()) ?>">
+										<?php echo mb_strtoupper(show_category_name()) ?>
+									</a>
+								</span>
+							</div>
+							<div class="unlb-conteudo-mob">
+								<span class="chapeu-default c-ed-<?php echo show_category_slug() ?>" style="margin-bottom: 5px"><?php echo get_field( "chapeu" ) ?></span>
+								<a href="<?php the_permalink(); ?>"><h2 class="c-titulo"><?php the_title() ?></h2></a>
+								<span class="editoria-default c-ed-<?php echo show_category_slug() ?>">
+									<a href="<?php echo category_link(show_category_name()) ?>">
+										<?php echo mb_strtoupper(show_category_name()) ?>
+									</a>
+								</span>
+							</div>
 						<?php
+						endif;
 						if ($aux == 3) {
 							break;
 						}
@@ -432,7 +446,7 @@ $builder = get_post_meta( $post->ID, 'tipi_builder_active', true );
 			'jornal-metropolitano', 'Jornal Metropolitano' 
 			); */?>	
 		<hr class="block-line"> -->
-
+	
 	</div><!-- home-wrap -->	
 
 <?php			
