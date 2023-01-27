@@ -165,6 +165,8 @@
 
         .line-height-1, .line-height-2, .line-height-6, .line-height-10, .line-height-20 {display: none;}
 
+        .thumb-position-0 {object-position: 0 0;}
+
     /* Geral */
 
 

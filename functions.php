@@ -204,7 +204,7 @@ function post_column ( $flag, $slug, $nome ) { ?>
         <?php 
 
         if ( $flag == "by_category" ) {
-            $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $nome ) ); 
+            $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $nome ) );
         } else {
             $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'tag' => $slug ) ); 
         }
@@ -216,7 +216,12 @@ function post_column ( $flag, $slug, $nome ) { ?>
                     <?php 
                     if ( has_post_thumbnail() ) { ?>
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail( '', array( 'class' => 'destaque-img' ) ); ?>
+                            <?php 
+                            if ( $flag == "by_category" ) {
+                                the_post_thumbnail( '', array( 'class' => 'destaque-img' ) );
+                            } else {
+                                the_post_thumbnail( '', array( 'class' => 'destaque-img thumb-position-0' ) );
+                            }?>
                         </a>
                     <?php
                     } else { ?>
