@@ -200,13 +200,14 @@ function post_column ( $flag, $slug, $nome ) { ?>
 
     <div class="cat-col">
         
-        <span class="titulo-secao c-ed-<?php echo $slug ?>"><a href="https://emtempo1.com.br/<?php echo $slug ?>"><?php echo $nome ?></a></span>
         <?php 
 
         if ( $flag == "by_category" ) {
             $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category_name' => $nome ) );
+            ?><span class="titulo-secao c-ed-<?php echo $slug ?>"><a href="https://emtempo1.com.br/<?php echo $slug ?>"><?php echo $nome ?></a></span> <?php
         } else {
             $custom_query = new WP_Query( array( 'posts_per_page' => -1, 'tag' => $slug ) ); 
+            ?><span class="titulo-secao c-ed-<?php echo $slug ?>"><a href="https://emtempo1.com.br/tag/<?php echo $slug ?>"><?php echo $nome ?></a></span> <?php
         }
         $aux = 0;
         while($custom_query->have_posts()) : $custom_query->the_post(); 
