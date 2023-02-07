@@ -287,7 +287,7 @@ array_push($destacation,
 
 			<div class="un-right">
 				<!-- Anúncio 4 -->
-				<div class="conteudo-especial"><?php echo do_shortcode( '[anuncio_et1_home_300x250_1]' ); ?></div>
+				<!-- <div class="conteudo-especial"><?php //echo do_shortcode( '[anuncio_et1_home_300x250_1]' ); ?></div> -->
 
 				<div class="artic-grid mb-30"> <!-- Últimos Artigos -->
 					<div class="artic-top mb-15">
@@ -309,7 +309,7 @@ array_push($destacation,
 							</div>
 						</div>
 						<?php
-						if ($aux == 4) {
+						if ($aux == 5) {
 							break;
 						}
 					endwhile;

@@ -315,6 +315,8 @@
         }
         .un-right {
             background-color: #f7f7f7;
+            display: flex;
+            align-items: center;
         }
         .unl-bloco, .d6-bloco {
             grid-template-columns: 4.5fr 5.5fr;
