@@ -291,7 +291,7 @@ array_push($destacation,
 
 				<div class="artic-grid mb-30"> <!-- Últimos Artigos -->
 					<div class="artic-top mb-15">
-						<span class="titulo-opiniao-main c-titulo">Últimos Artigos</span>
+						<span class="titulo-opiniao-main c-titulo">Artigos de Opinião</span>
 						<span class="ler-mais"><a href="<?php echo category_link('Opinião') ?>">leia mais</a></span>
 					</div>
 					<?php 
@@ -309,7 +309,7 @@ array_push($destacation,
 							</div>
 						</div>
 						<?php
-						if ($aux == 5) {
+						if ($aux == 8) {
 							break;
 						}
 					endwhile;
