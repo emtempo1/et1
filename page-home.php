@@ -246,7 +246,7 @@ array_push($destacation,
 				<div class="unl-bloco">					
 					<?php 
 					$aux = 0;
-					$custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category__not_in' => 2463 ) ); //Impressos não incluídos
+					$custom_query = new WP_Query( array( 'posts_per_page' => -1, 'category__not_in' => array(2463, 440 ) ) ); //Impressos não incluídos
 					while($custom_query->have_posts()) : $custom_query->the_post(); 		
 					
 						if ( !in_array(get_the_title(), $destacation) ) :
@@ -289,8 +289,8 @@ array_push($destacation,
 				<!-- Anúncio 4 -->
 				<!-- <div class="conteudo-especial"><?php //echo do_shortcode( '[anuncio_et1_home_300x250_1]' ); ?></div> -->
 
-				<div class="artic-grid mb-30"> <!-- Últimos Artigos -->
-					<div class="artic-top mb-15">
+				<div class="artic-grid"> <!-- Últimos Artigos -->
+					<div class="artic-top">
 						<span class="titulo-opiniao-main c-titulo">Artigos de Opinião</span>
 						<span class="ler-mais"><a href="<?php echo category_link('Opinião') ?>">leia mais</a></span>
 					</div>
@@ -309,7 +309,7 @@ array_push($destacation,
 							</div>
 						</div>
 						<?php
-						if ($aux == 8) {
+						if ($aux == 7) {
 							break;
 						}
 					endwhile;
